@@ -8,6 +8,7 @@ import android.view.View;
 
 public class projeto4all extends AppCompatActivity {
 
+    //função iniciar o app
     public void iniciarApp (View view){
         Intent intent1 = new Intent(getApplicationContext(), appImc.class);
         startActivity( intent1 );
