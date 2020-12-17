@@ -9,11 +9,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class appImc extends AppCompatActivity {
-
+    
+//declarações
     public EditText editPeso;
     public EditText editAltura;
     public TextView textResultado;
-
+    
+//função 'voltar' para página anterior
     public void voltar (View view){
         Intent intent1 = new Intent(getApplicationContext(), projeto4all.class);
         startActivity( intent1 );
@@ -29,6 +31,7 @@ public class appImc extends AppCompatActivity {
         textResultado = findViewById( R.id.textResultado);
     }
 
+    //função calcular o IMC
     public void calcularImc(View view){
         double peso = Double.parseDouble( editPeso.getText().toString() );
         double altura = Double.parseDouble( editAltura.getText().toString() );
@@ -52,6 +55,7 @@ public class appImc extends AppCompatActivity {
             //declaração do resultado
             textResultado.setText( "Obesidade III, IMC = " + imc );
         }
+        
     /*Fórmula do IMC:
         peso/altura²
      */
